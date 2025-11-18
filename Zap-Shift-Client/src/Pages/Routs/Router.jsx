@@ -1,9 +1,15 @@
 import { createBrowserRouter } from "react-router";
-import RootLayout from "../layouts/RootLayout";
+import RootLayout from "../Layouts/RootLayout";
+import AuthLayout from "../Layouts/AuthLayout";
+import DashboardLayout from "../Layouts/DashboardLayout";
 import PrivateRoute from "./PrivateRoute";
 import SendParcel from "../SendParcel/SendParcel";
 import Coverage from "../Coverage/Coverage";
 import HomePage from "../Home/HomePage";
+import Login from "../Auth/Login/Login";
+import Register from "../Auth/Register/Register";
+import Rider from "../Rider/Rider";
+import MyParcels from "../DashBoard/MyParcels";
 
 export const Router = createBrowserRouter([
   {
@@ -18,7 +24,7 @@ export const Router = createBrowserRouter([
         path: "rider",
         element: (
           <PrivateRoute>
-            <Rider></Rider>
+            <Rider />
           </PrivateRoute>
         ),
       },
@@ -26,7 +32,7 @@ export const Router = createBrowserRouter([
         path: "send-parcel",
         element: (
           <PrivateRoute>
-            <SendParcel></SendParcel>
+            <SendParcel />
           </PrivateRoute>
         ),
         loader: () => fetch("/serviceCenters.json").then((res) => res.json()),
@@ -56,7 +62,7 @@ export const Router = createBrowserRouter([
     path: "dashboard",
     element: (
       <PrivateRoute>
-        <DashboardLayout></DashboardLayout>
+        <DashboardLayout />
       </PrivateRoute>
     ),
     children: [
