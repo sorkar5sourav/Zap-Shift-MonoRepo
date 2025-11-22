@@ -2,6 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router";
 import useAuth from "../../hooks/useAuth";
 import Logo from "../../Component/Logo";
+import Arrow from "../../assets/Images/Frame 4.png";
 const NavBar = () => {
   const { user, logOut } = useAuth();
 
@@ -13,25 +14,43 @@ const NavBar = () => {
       });
   };
 
+  const navLinkClass = ({ isActive }) =>
+    isActive ? "btn btn-primary rounded-full text-black" : "";
+
   const links = (
     <>
       <li>
-        <NavLink to="">Services</NavLink>
+        <NavLink to="" className={navLinkClass}>
+          Services
+        </NavLink>
       </li>
       <li>
-        <NavLink to="">About Us</NavLink>
+        <NavLink to="/coverage" className={navLinkClass}>
+          Coverage
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/send-parcel">Send Parcel</NavLink>
+        <NavLink to="/about" className={navLinkClass}>
+          About Us
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/coverage">Coverage</NavLink>
+        <NavLink to="/be-a-rider" className={navLinkClass}>
+          Be a Rider
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/pricing" className={navLinkClass}>
+          Pricing
+        </NavLink>
       </li>
 
       {user && (
         <>
           <li>
-            <NavLink to="/dashboard/my-parcels">My Parcels</NavLink>
+            <NavLink to="/dashboard/my-parcels" className={navLinkClass}>
+              My Parcels
+            </NavLink>
           </li>
         </>
       )}
@@ -74,17 +93,28 @@ const NavBar = () => {
       </div>
       <div className="navbar-end">
         {user ? (
-          <a onClick={handleLogOut} className="btn">
+          <a
+            onClick={handleLogOut}
+            className="btn btn-primary rounded-lg text-black font-bold"
+          >
             Log Out
           </a>
         ) : (
-          <Link className="btn" to="/login">
-            Log in
-          </Link>
+          <div className="flex items-center">
+            <Link className="btn rounded-lg" to="/login">
+              Sign in
+            </Link>
+            <Link
+              className="btn btn-primary rounded-lg text-black ml-4"
+              to="/register"
+            >
+              Sign up
+            </Link>
+            <Link to="/rider">
+              <img src={Arrow} alt="" className="w-10 h-10" />
+            </Link>
+          </div>
         )}
-        <Link className="btn btn-primary text-black mx-4" to="/rider">
-          Be a Rider
-        </Link>
       </div>
     </div>
   );
