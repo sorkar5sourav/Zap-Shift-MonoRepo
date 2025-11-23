@@ -15,4 +15,9 @@ body {
   font-family: "Urbanist", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  background-color: #dadada;
+}
+
+.btn-primary {
+  @apply text-black;
 }

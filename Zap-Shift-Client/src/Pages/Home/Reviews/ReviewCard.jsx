@@ -2,26 +2,17 @@ import React from "react";
 import { FaQuoteLeft } from "react-icons/fa";
 
 const ReviewCard = ({ review }) => {
-  const { userName, review: testimonial, user_photoURL } = review;
+  const { userName, review: testimonial, user_photoURL, user_email } = review;
   return (
-    <div className="max-w-sm bg-base-100 shadow-lg rounded-xl p-6 border border-gray-200">
-      {/* Quote Icon */}
-      <FaQuoteLeft className="text-primary text-2xl mb-4" />
+    <div className="card">
+      <div className="quote">❝</div>
+      <p className="text">{testimonial}</p>
 
-      {/* Review Text */}
-      <p className="mb-4">{testimonial}</p>
-
-      {/* Divider */}
-      <div className="border-t border-dashed border-gray-300 my-4"></div>
-
-      {/* Profile */}
-      <div className="flex items-center gap-4">
-        <div className="w-10 h-10 rounded-full bg-primary">
-          <img src={user_photoURL} alt="" />
-        </div>
+      <div className="profile">
+        <div className="avatar"></div>
         <div>
-          <h3 className="font-semibold text-lg">{userName}</h3>
-          <p className="text-sm text-gray-500">Senior Product Designer</p>
+          <h4>{userName}</h4>
+          <span>{user_email}</span>
         </div>
       </div>
     </div>
@@ -29,3 +20,14 @@ const ReviewCard = ({ review }) => {
 };
 
 export default ReviewCard;
+
+// "id": "5f47ac10b4f1c03e8c890123",
+// "user_email": "emma.watson@example.com",
+// "userName": "Emma Watson",
+// "delivery_email": "delivery8@example.com",
+// "ratings": 4.7,
+// "review": "Fast, safe, and friendly delivery service.",
+// "parcel_id": "5f47ac10b4f1c03e8c321098",
+// "pick_up_email": "pickup8@example.com",
+// "user_photoURL": "https://randomuser.me/api/portraits/women/5.jpg",
+// "date": "2024-08-20T07:30:00.000Z"
