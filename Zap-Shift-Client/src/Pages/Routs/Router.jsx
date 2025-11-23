@@ -36,16 +36,12 @@ export const Router = createBrowserRouter([
             <SendParcel />
           </PrivateRoute>
         ),
-        loader: () => fetch("/serviceCenters.json").then((res) => res.json()),
+        loader: () => fetch("http://localhost:3000/warehouse"),
       },
       {
         path: "coverage",
         Component: Coverage,
-        loader: () => fetch("/serviceCenters.json").then((res) => res.json()),
-      },
-      {
-        path: "*",
-        Component: ErrorPage,
+        loader: () => fetch("http://localhost:3000/warehouse"),
       },
     ],
   },
@@ -76,5 +72,9 @@ export const Router = createBrowserRouter([
         Component: MyParcels,
       },
     ],
+  },
+  {
+    path: "*",
+    Component: ErrorPage,
   },
 ]);

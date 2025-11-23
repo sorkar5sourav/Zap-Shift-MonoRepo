@@ -1,0 +1,86 @@
+.slider-container {
+  width: 100%;
+  padding: 40px 0;
+  position: relative;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.quote {
+  font-size: 36px;
+  color: #8fd0c8;
+}
+
+.text {
+  color: #555;
+  margin: 15px 0 20px;
+  line-height: 1.6;
+}
+
+.profile {
+  border-top: 1px dashed #8fd0c8;
+  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  background: #0c574f;
+  border-radius: 50%;
+}
+
+.profile h4 {
+  margin: 0;
+  color: #063c35;
+  font-weight: 600;
+}
+
+.profile span {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Bottom Controls */
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #e6ffdc;
+  color: #0c574f;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Pagination dots */
+.custom-pagination .swiper-pagination-bullet {
+  background: #0c574f !important;
+  width: 8px;
+  height: 8px;
+  opacity: 0.4;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+}

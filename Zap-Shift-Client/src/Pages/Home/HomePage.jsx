@@ -6,10 +6,10 @@ const reviewsPromise = fetch("/reviews.json").then((res) => res.json());
 
 const HomePage = () => {
   return (
-    <div>
-      <Banner></Banner>
-      <Brands></Brands>
-      <Reviews reviewsPromise={reviewsPromise}></Reviews>
+    <div className="">
+      <Banner />
+      <Brands />
+      <Reviews reviewsPromise={reviewsPromise} />
     </div>
   );
 };

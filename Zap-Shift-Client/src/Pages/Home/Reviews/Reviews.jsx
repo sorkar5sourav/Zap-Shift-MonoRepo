@@ -1,7 +1,12 @@
 import React, { use } from "react";
-import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import ReviewCard from "./Reviewcard";
+import { Navigation, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "./TestimonialSlider.css";
+import ReviewCard from "./ReviewCard";
 
 const Reviews = ({ reviewsPromise }) => {
   const reviews = use(reviewsPromise);
@@ -11,41 +16,41 @@ const Reviews = ({ reviewsPromise }) => {
       <div className="text-center mb-24">
         <h3 className="text-3xl text-center font-bold my-8">Review</h3>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non soluta,
-          perspiciatis esse eius praesentium similique asperiores quasi veniam
-          repellat architecto repellendus, deserunt accusantium, debitis ipsa.
-          Expedita possimus facilis voluptas deserunt.
+          Enhance posture, mobility, and well-being effortlessly with Posture
+          Pro. Achieve proper alignment, reduce pain, and strengthen your body
+          with ease!
         </p>
       </div>
-
-      <Swiper
-        loop={true}
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={3}
-        coverflowEffect={{
-          rotate: 30,
-          stretch: "50%",
-          depth: 200,
-          modifier: 1,
-          scale: 0.75,
-          slideShadows: true,
-        }}
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
-        }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination, Autoplay]}
-        className="mySwiper"
-      >
-        {reviews.map((review) => (
-          <SwiperSlide key={review.id}>
-            <ReviewCard review={review}></ReviewCard>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="slider-container">
+        <Swiper
+          modules={[Navigation, Pagination]}
+          slidesPerView={5}
+          spaceBetween={30}
+          pagination={{ clickable: true, el: ".custom-pagination" }}
+          navigation={{
+            nextEl: ".next-btn",
+            prevEl: ".prev-btn",
+          }}
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            600: { slidesPerView: 2 },
+            900: { slidesPerView: 3 },
+            1200: { slidesPerView: 4 },
+            1500: { slidesPerView: 5 },
+          }}
+        >
+          {reviews.map((review) => (
+            <SwiperSlide key={review.id}>
+              <ReviewCard review={review}></ReviewCard>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <div className="controls">
+          <button className="prev-btn nav-btn">←</button>
+          <div className="custom-pagination"></div>
+          <button className="next-btn nav-btn">→</button>
+        </div>
+      </div>
     </div>
   );
 };

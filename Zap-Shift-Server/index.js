@@ -28,6 +28,7 @@ async function run() {
 
     const db = client.db("zap-shift-db");
     const parcelsCollection = db.collection("parcels");
+    const warehouseCollection = db.collection("warehouse");
 
     // parcel api
     app.get("/parcels", async (req, res) => {
@@ -46,6 +47,11 @@ async function run() {
     app.post("/parcels", async (req, res) => {
       const parcel = req.body;
       const result = await parcelsCollection.insertOne(parcel);
+      res.send(result);
+    });
+
+    app.get("/warehouse", async (req, res) => {
+      const result = await warehouseCollection.find().toArray();
       res.send(result);
     });
 
