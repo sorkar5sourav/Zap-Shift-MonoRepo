@@ -15,7 +15,7 @@ const Banner = () => {
         <img src={bannerImg2} />
         <img src={bannerImg3} />
       </Carousel>
-      <div className="absolute top-14/20 left-5/23 -translate-x-1/2 -translate-y-1/2 flex flex-row flex-wrap justify-center">
+      <div className="absolute hidden md:flex top-14/20 left-6/25 lg:left-1/6 -translate-x-1/2 -translate-y-1/2 flex flex-row flex-wrap justify-center">
         <Link to={"/track"} className="btn max-h-14 btn-primary rounded-full">
           Trak Your Parcel
         </Link>
