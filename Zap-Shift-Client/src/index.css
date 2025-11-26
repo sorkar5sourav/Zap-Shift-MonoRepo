@@ -21,3 +21,9 @@ body {
 .btn-primary {
   @apply text-black;
 }
+.black8 {
+  color: #606060;
+}
+.black5 {
+  color: #dadada;
+}
