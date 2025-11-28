@@ -40,32 +40,27 @@ const Services = () => {
     },
   ];
   return (
-    <div className="text-center bg-secondary p-5 md:p-10 lg:p-20 rounded-2xl my-20">
+    <div className="text-center bg-secondary p-5 md:p-10 lg:p-20 rounded-4xl my-20">
       <h2 className="text-white text-5xl font-bold mb-4">Our Services</h2>
-      <p className="black5">
+      <p className="black5 max-w-190 mx-auto mb-8">
         Enjoy fast, reliable parcel delivery with real-time tracking and zero
         hassle. From personal packages to business shipments — we deliver on
         time, every time.
       </p>
-      <div className="grid grid-cols-2 gap-5 lg:grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-3">
         {services.map((service, i) => (
           <div
             key={i}
-            className="flex flex-col justify-start items-center rounded-3xl bg-base-100 z-10 p-8 hover:bg-primary h-55 md:w-100 md:h-85 shadow-sm transition-all duration-300"
+            className="flex flex-col justify-start items-center rounded-3xl bg-base-100 z-10 p-8 hover:bg-primary md:w-80 md:h-85 lg:w-full shadow-sm transition-all duration-300"
           >
-            <div className="h-20 w-20 bg-linear-to-b from-[#EEEDFC] to-[#fff/0] rounded-full flex justify-center items-center">
-              <img
-                src={servicePng}
-                className="max-h-14 w-14 hidden md:flex"
-                alt=""
-              />
+            <div className="h-20 w-20 bg-linear-to-b from-[#EEEDFC] to-[#fff/0] rounded-full hidden md:flex justify-center items-center">
+              <img src={servicePng} className="max-h-14 w-14" alt="" />
             </div>
-            <div className="text-center p-0">
+            <div className="text-center">
               <h2 className="mb-4 text-secondary md:my-4 text-2xl font-bold">
                 {service.title}
               </h2>
               <p className="black8">{service.description}</p>
-              <div className="justify-end"></div>
             </div>
           </div>
         ))}

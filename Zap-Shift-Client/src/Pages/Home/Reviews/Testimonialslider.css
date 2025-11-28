@@ -4,22 +4,6 @@
   position: relative;
 }
 
-.card {
-  background: white;
-  padding: 25px;
-  border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-  min-height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.quote {
-  font-size: 36px;
-  color: #8fd0c8;
-}
-
 .text {
   color: #555;
   margin: 15px 0 20px;

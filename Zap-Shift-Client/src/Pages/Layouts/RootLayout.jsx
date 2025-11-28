@@ -5,7 +5,7 @@ import Footer from "../Shared/Footer";
 
 const RootLayout = () => {
   return (
-    <div className="max-w-[1440px] flex flex-col justify-between min-h-screen mx-auto gap-10 p-5">
+    <div className="max-w-[1600px] flex flex-col justify-between min-h-screen p-5">
       <NavBar />
 
       <Outlet />

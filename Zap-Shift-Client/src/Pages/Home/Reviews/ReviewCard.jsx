@@ -1,11 +1,11 @@
 import React from "react";
-import { FaQuoteLeft } from "react-icons/fa";
+import QuotePng from "../../../assets/Images/reviewQuote.png";
 
 const ReviewCard = ({ review }) => {
   const { userName, review: testimonial, user_photoURL, user_email } = review;
   return (
-    <div className="card">
-      <div className="quote">❝</div>
+    <div className="bg-white p-8 rounded-3xl shadow-md">
+      <img src={QuotePng} alt="Quote" />
       <p className="text">{testimonial}</p>
 
       <div className="profile">

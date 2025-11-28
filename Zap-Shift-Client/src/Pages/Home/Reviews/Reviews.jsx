@@ -40,7 +40,7 @@ const Reviews = ({ reviewsPromise }) => {
           }}
         >
           {reviews.map((review) => (
-            <SwiperSlide key={review.id}>
+            <SwiperSlide>
               <ReviewCard review={review}></ReviewCard>
             </SwiperSlide>
           ))}
