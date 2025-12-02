@@ -41,12 +41,14 @@ const Services = () => {
   ];
   return (
     <div className="text-center bg-secondary p-5 md:p-10 lg:p-20 rounded-4xl my-20">
-      <h2 className="text-white text-5xl font-bold mb-4">Our Services</h2>
-      <p className="black5 max-w-190 mx-auto mb-8">
-        Enjoy fast, reliable parcel delivery with real-time tracking and zero
-        hassle. From personal packages to business shipments — we deliver on
-        time, every time.
-      </p>
+      <div className="my-10 lg:my-0">
+        <h2 className="text-white text-5xl font-bold mb-4">Our Services</h2>
+        <p className="black5 max-w-190 mx-auto mb-8">
+          Enjoy fast, reliable parcel delivery with real-time tracking and zero
+          hassle. From personal packages to business shipments — we deliver on
+          time, every time.
+        </p>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-3">
         {services.map((service, i) => (
           <div

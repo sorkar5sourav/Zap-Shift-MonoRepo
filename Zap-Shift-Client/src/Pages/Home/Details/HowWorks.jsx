@@ -27,13 +27,15 @@ const HowWorks = () => {
     },
   ];
   return (
-    <div className="my-10 md:mx-10 md:mb-20">
-      <h3 className="text-4xl font-bold ml-5 mb-10">How It Works</h3>
+    <div className="my-10 max-w-7xl mx-auto md:mb-20">
+      <h3 className="text-3xl font-bold text-secondery ml-5 mb-10">
+        How It Works
+      </h3>
       <div className="grid grid-cols-2 lg:grid-cols-4 justify-center gap-5">
         {datas.map((data, i) => (
           <div
             key={i}
-            className="card p-10 w-45 h-55 md:w-76 md:h-60 bg-base-100 card-md shadow-sm"
+            className="card p-10 w-full h-55 md:h-60 bg-base-100 card-md shadow-sm"
           >
             <img src={truck} className="max-h-14 w-14 hidden md:flex" alt="" />
             <div className="card-body p-0">

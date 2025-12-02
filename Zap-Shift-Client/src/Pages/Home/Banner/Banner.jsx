@@ -9,7 +9,7 @@ import { Link } from "react-router";
 
 const Banner = () => {
   return (
-    <div className="relative">
+    <div className="relative my-20">
       <Carousel autoPlay={true} infiniteLoop={true} className="w-full mx-auto">
         <img src={bannerImg1} />
         <img src={bannerImg2} />
