@@ -1,6 +1,7 @@
 import React, { use } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import reviewIMG from "../../../assets/Images/customer-top.png";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -13,9 +14,12 @@ const Reviews = ({ reviewsPromise }) => {
   // console.log(reviews);
   return (
     <div className="my-24">
-      <div className="text-center mb-24">
-        <h3 className="text-3xl text-center font-bold my-8">Review</h3>
-        <p>
+      <img src={reviewIMG} className="mx-auto" alt="" />
+      <div className="text-center max-w-210 mx-auto my-10">
+        <h3 className="text-4xl text-secondary font-bold mb-6">
+          What our customers are sayings
+        </h3>
+        <p className="text-black8">
           Enhance posture, mobility, and well-being effortlessly with Posture
           Pro. Achieve proper alignment, reduce pain, and strengthen your body
           with ease!

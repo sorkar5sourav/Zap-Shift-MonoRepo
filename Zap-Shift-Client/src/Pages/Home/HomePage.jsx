@@ -2,6 +2,7 @@ import Banner from "./Banner/Banner";
 import Brands from "./Brands/Brands";
 import HowWorks from "./Details/HowWorks";
 import Labels from "./Details/Labels";
+import FAQ from "./FAQ/FAQ";
 import Reviews from "./Reviews/Reviews";
 import Services from "./Services/Services";
 
@@ -16,6 +17,7 @@ const HomePage = () => {
       <Brands />
       <Labels />
       <Reviews reviewsPromise={reviewsPromise} />
+      <FAQ />
     </div>
   );
 };
